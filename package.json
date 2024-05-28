@@ -1,0 +1,22 @@
+{
+  "name": "creed-cast",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.php",
+  "scripts": {
+    "dev": "tailwindcss -i ./tailwind.css -o ./public/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gdsc0301/creedcast-plugin.git"
+  },
+  "author": "Guilherme Carvalho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gdsc0301/creedcast-plugin/issues"
+  },
+  "homepage": "https://github.com/gdsc0301/creedcast-plugin#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}

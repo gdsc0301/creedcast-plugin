@@ -1,0 +1,16 @@
+{
+  "name": "guilherme/creed-cast",
+  "type": "plugin",
+  "autoload": {
+      "psr-4": {
+          "CreedCast\\": "src/"
+      }
+  },
+  "authors": [
+      {
+          "name": "Guilherme Carvalho",
+          "email": "gdsc0301@gmail.com"
+      }
+  ],
+  "require": {}
+}
