@@ -1,50 +1,29 @@
 <?php
   namespace CreedCast;
+  use CreedCast\Views;
 
   require __DIR__ . '/../vendor/autoload.php';
 
   class CreedCast {
+    public static string $menuSlug = 'creed-cast';
 
     public function __construct() {
-      $this->registerCPTs();
-
-      // Registers a menu item in the admin dashboard
-      add_action('admin_menu', [$this, 'registerMenuItem']);
+      add_action('admin_menu', [$this, 'registerMenu']);
+      
+      new CPT\PodcastShows();
+      new Views\Import();
     }
 
-    public function registerCPTs() {
-      new CPT\PodcastShows($this);
-      new CPT\PodcastEpisodes($this);
-    }
-
-    public function registerMenuItem() {
+    public function registerMenu() {
       add_menu_page(
         'CreedCast', // Page title
         'CreedCast', // Menu title
         'manage_options', // Capability
-        'creedcast', // Menu slug
-        [$this, 'render'], // Callback function
+        $this::$menuSlug, // Menu slug
+        '', // Callback function
         'dashicons-microphone', // Icon URL
         6 // Position
       );
-
-      add_submenu_page(
-        'creedcast', // Parent slug
-        'Import', // Page title
-        'Import', // Menu title
-        'manage_options', // Capability
-        'import', // Menu slug
-        [$this,'renderImportPage'],'0'
-      );
-    }
-
-    public function render() {
-      // Redirect to the import page
-      wp_redirect(admin_url('admin.php?page=import'));
-    }
-
-    public function renderImportPage() {
-      new Views\Import();
     }
 
     public static function asset($path) {

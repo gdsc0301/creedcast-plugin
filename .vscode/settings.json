@@ -1,0 +1,13 @@
+{
+  "[php]": {
+    "editor.linkedEditing": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false
+  },
+  "[json]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": true
+  }
+}
