@@ -7,7 +7,9 @@ docker compose up -d
 ```
 
 ## Access and setup WordPress
-Once the containers have spun all the way up and you see the WordPress core files in the same folder, you should be able to visit http://localhost to see the website and proceed through the WordPress install steps.
+Once the containers have spun all the way up and you see the WordPress core files in the __wordpress__ folder.
+
+Now you should be able to visit http://localhost to see the website and proceed through the WordPress install steps.
 
 ## Enable the plugin
 This plugin requires Advanced Custom Fields to be installed and activated. 
